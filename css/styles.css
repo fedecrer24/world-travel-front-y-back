@@ -1,0 +1,587 @@
+:root {
+    --blanco: #ffffff;
+    --primario: #1f9ede;
+    --negro: #000000;
+    --azul: #162ABF;
+    --seleccion: #62E0FF;
+    --contenedor: #e6f4ff;
+    --fondo: #1EB6DC;
+}
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+  }
+
+.sombra {
+    -webkit-box-shadow: 1px 7px 17px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 7px 17px -5px rgba(0,0,0,0.75);
+    box-shadow: 1px 7px 17px -5px rgba(0,0,0,0.75);
+    background-color: var(--contenedor);
+width: 50%;
+margin-left: 25%;
+padding: 2rem;
+margin-top: 0.5rem;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+body {
+    font-size: 16px;
+    font-family:"Noto Sans", sans-serif;
+    background-image: linear-gradient(to top, var(--fondo) 0%, var(--blanco) 100%);
+}
+
+.texto i{
+    font-size: 1.5rem;
+    }
+
+/* Ubicando los iconos hacia la derecha */
+
+.iconos{
+    float:right;
+    margin: 0.10px;  
+    padding-top: 2rem;
+}
+
+.margen-derecho {
+    float: right;
+    margin: 0.2px;
+    font-size: 3rem;
+}
+.texto{
+    font-size: 8px;
+    text-align: right;   
+}
+.tamanio{
+    font-size: 10px;
+}
+
+/*NAVEGACION CON SUBMENU*/
+
+.nav-bg {
+    max-width: auto;
+    text-align: center;
+   }
+     
+.navegacion ul {
+    list-style: none;
+}
+
+.menuf>li {
+  /*  position: relative;*/
+  display: inline-block; /*con esto acomodo el menu uno al lado del otro*/
+  justify-content: space-between;
+  margin: 0.5rem;
+  margin-right: 15rem;
+  padding-left: 5rem;
+  }
+
+
+/*ahora le daremos estilo a nuestros botones*/
+.menuf > li > a {
+    display: block;
+    padding-top: 30px;
+    padding: 0.5rem;
+    border-radius: 5px;
+    background-color: rgb(33, 177, 221);
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white; /*con esto le pones color a las letras*/
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none; /*cpn esto le sacas el subrayad a las letras(etiquetas)*/
+}
+
+
+.menuf li a:hover {
+    color: white;
+    background-color: rgb(53, 205, 243);
+  }
+
+/*submenu*/
+.submenuf {
+    position: absolute;
+    z-index: 2;
+    background-color: #62E0FF; /*aca cambiale el fondo al submenu y fijate como queda*/
+    width: 30rem; /*con esto voy a cambiar el tamaño del sumenu*/
+    visibility: hidden;
+    opacity:0;
+    transition: opacity 1.5s;
+}
+
+.submenuf li a{
+    display: block;
+  
+    padding-top: 31.3;
+    padding: 2.5rem;
+    width: auto;
+    border-radius: 5px;
+    font-size: 2.5rem;
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    
+}
+.submenuf li p {
+    color: red;
+    font-size: 1.5rem;
+}
+
+.menuf li:hover .submenuf {
+    visibility: visible;
+    opacity:1;
+    padding: 0;
+}
+
+a:active{
+    border: 2px solid black;
+    background-color: rgb(54, 200, 245);
+}
+
+/*esto va en conteiner*/
+.itemf{
+    background-color: rgb(33, 177, 221);
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+}
+ /* Tamaño carousel */
+ .slide {
+    margin-top: 0.2rem;
+  }
+  .slide img {
+    height: 65vh;
+  }
+  /*.carru-text {
+    color: var(--blanco)
+	-webkit-text-stroke: 1px #282828;
+	text-shadow: 0px 4px 4px #282828;
+    font-size: 5rem;
+  }
+ .carru-p {
+    font-size: 3rem;
+    -webkit-text-stroke: 1px #282828;
+	text-shadow: 0px 10px 10px #282828;
+  }*/
+
+  /*.carrusel {
+    background: linear-gradient(to right, rgb(97, 67, 133), rgb(81, 99, 149));
+    height: 50vh;
+   padding-top: 150px;
+  }
+
+  .carru-text {
+    font-size: 8rem;
+    color: transparent;
+  -moz-text-stroke-width: 2px;
+  -webkit-text-stroke-width: 2px;
+  -moz-text-stroke-color: #000000;
+  -webkit-text-stroke-color: #ffffff;
+  }
+
+  .text-shadow {
+    text-shadow: 7px 7px #8dffcd;
+  }
+*/
+
+.carrusel {
+    background: linear-gradient(to right, var(--azul), rgb(247, 187, 151));
+}
+.text-shadow {
+    font-size: 8rem;
+    color: var(--azul);
+    text-shadow: -3px 3px #ffffff, -3px -3px #ffffff, 3px -3px #ffffff, 3px 3px #f3f3f2, 6px 6px #6ac7c2;
+}
+
+.text-shadow1 {
+    font-size: 8rem;
+    color: green;
+    text-shadow: -3px 3px #ffffff, -3px -3px #ffffff, 3px -3px #ffffff, 3px 3px #f3f3f2, 6px 6px #6ac7c2;
+}
+
+.text-shadow2 {
+    font-size: 8rem;
+    color: maroon;
+    text-shadow: -3px 3px #ffffff, -3px -3px #ffffff, 3px -3px #ffffff, 3px 3px #f3f3f2, 6px 6px #6ac7c2;
+}
+ /* Titulos */
+  .titulo-nosotros ,
+  .titulo-destinos {
+    background-color: var(--primario);
+    max-width: 50%;
+    margin: 2rem auto;
+    margin-top: 5rem ;
+    text-align: center;
+    font-size: 3.7rem;
+    color: var(--blanco);
+  }
+
+/* Sobre Nosotros*/
+.contenedor-central {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+.contenedor-sn-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+}
+
+.imagen-texto {
+    display: flex;
+    flex-direction: column;
+}
+
+.nosotros {
+    width: 500px;
+    height: auto;
+    margin: 1rem;
+}
+
+.texto-nosotros {
+    max-width: auto;
+    height: auto;
+    font-size: 2rem;
+}
+
+.texto-nosotros h2,
+.texto-nosotros p {
+    margin: 3%;
+}
+
+/*destinos*/
+.contenedor-mayor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row; /* Para que los contenedores estén uno encima del otro */
+    margin-top: 3%;
+}
+.contenedor-destinos {
+    display: inline-block;
+    margin-right: 20px; /* Ajusta el espacio entre las imágenes */
+    position: relative;
+    width: 400px; /* Ancho deseado para los contenedores */
+    height: 500px; /* Altura deseada para los contenedores */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que se desborde */
+}
+
+.contenedor:last-child {
+    margin-right: 0; /* Para que no haya margen derecho en la última imagen */
+}
+
+.texto-dest {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--negro);
+    transition: transform 0.3s ease; /* Transición suave para la animación */
+}
+
+
+.contenedor-destinos:hover .texto-dest{
+    transform: translate(-50%, -50%) scale(1.1); /* Escala la imagen al 110% */
+}
+
+a {
+    text-decoration: none;
+    color: inherit; /* Para heredar el color del texto */
+    transition: transform 0.3s ease; /* Transición suave para la animación */
+}
+
+.todas{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Hace que la imagen ocupe todo el ancho del contenedor */
+    height: 100%; /* Hace que la imagen ocupe todo el alto del contenedor */
+    object-fit: cover; /* Escala la imagen para que ocupe todo el contenedor */
+    object-position: center; /* Centra la imagen dentro del contenedor */
+    transition: transform 0.3s ease; /* Transición suave para la animación */
+}
+
+.contenedor-destinos:hover img {
+    transform: scale(1.1); /* Escala la imagen al 110% */
+}
+
+/* Estilo para el contenedor con clase "tu-viaje" */
+.tu-viaje {
+    text-align: center; /* Centra el contenido horizontalmente */
+}
+
+/* Estilo para la imagen con clase "armatuviaje" */
+.armatuviaje {
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+    max-width: 97%; /* Establece un ancho máximo para la imagen */
+    height: auto; /* Mantiene la proporción de aspecto de la imagen */
+    display: block; /* Hace que la imagen sea un bloque para alinearla correctamente */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+/* FORMULARIO */
+.contenedor-titleform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 120%;
+    height: 4rem; 
+    background-color: var(--primario);
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.titulo-form {
+    font-size: 3rem;
+    text-align: center;
+}
+.formulario{
+    border-radius: 5px;
+    background-color: var(--contenedor);
+   /* padding: 2%;
+    margin:1%  20%;*/
+    background-size: 20px 20px;
+    padding: 2%;
+    margin: 1rem 50.7rem;
+    width: 50%; /* La imagen ocupa todo el ancho del contenedor */
+    max-width: 100%; /* Establece un ancho máximo para la imagen */
+  /*  width: 4000px; /* Establece el ancho del formulario */
+  /*  height: 3000px; /* Establece la altura del formulario */
+}
+
+/*.contenedor-formulario {
+    display: inline-block;
+    margin-right: 20px; /* Ajusta el espacio entre las imágenes */
+   /*position: relative;
+    width: 400px; /* Ancho deseado para los contenedores */
+   /* height: 500px; /* Altura deseada para los contenedores */
+    /*overflow: hidden; /* Oculta cualquier parte de la imagen que se desborde */
+}/*
+
+.campo {
+    margin-bottom: 1rem;
+}
+
+.campo label {
+    color: var(--negro);
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: .9rem;
+    display: block;
+}
+
+.titulocontacto , .tituloreserva {
+    background-color: #1f9ede /*var(--primario)*/;/*
+    max-width: 100%;
+    margin: 1rem auto;
+    text-align: center;
+    font-size: 3.9rem;
+    color: var(--blanco);
+  }
+h3 {
+    margin: 1rem;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.input-text {
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+    background-color: #ede1e1;
+    font-size: 1.9rem;
+}
+
+.campo2 label {
+    font-size: 3rem;
+}
+*/
+.titulocontacto {
+    color: var(--contenedor);
+}
+
+  .botonenviar {
+    background-color: #1f9ede /*var(--primario)*/;
+    max-width: 50%;
+    width: 45%;
+    margin-left:3rem;
+    margin-top: 3rem ;
+    text-align: center;
+   font-size: 2.5rem;
+    color: white /*var(--blanco)*/;
+  }
+
+
+  .contenedor-formulario {
+    display: inline-block;
+    margin-right: 20px; /* Ajusta el espacio entre las imágenes */
+    position: relative;
+    width: 400px; /* Ancho deseado para los contenedores */
+    height: auto; /* Ajusta la altura automáticamente */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que se desborde */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.campo, .campo2 {
+    margin-bottom: 1rem;
+}
+
+.campo label, .campo input[type="checkbox"], .campo input[type="checkbox"] + label {
+    color: #333;
+    font-size: 1.2rem; /* Tamaño de la letra ajustado */
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.tituloreserva {
+    background-color: #1f9ede; /*var(--primario);*/
+    max-width: 100%;
+    margin: 1rem auto;
+    text-align: center;
+    font-size: 3rem;
+    color: white; /*var(--blanco);*/
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+h3 {
+    margin: 1rem;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.campo label {
+    font-size: 2rem;
+}
+
+.input-text {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 0.75rem;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    margin-right: 0.5rem;
+}
+
+.campo2 label, .campo2 input[type="radio"], .campo2 input[type="radio"] + label {
+    font-size: 2.2rem; /* Tamaño de la letra ajustado */
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+select {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    margin-bottom: 1rem;
+}
+
+.select-destinos {
+    font-size: 2rem;
+}
+
+.contenedor-hor {
+    display: flex;
+}
+.horario-com {
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-right: 1rem;
+}
+
+.adj-img {
+    font-size: 2.5rem;
+}
+
+.imagen-adjunta {
+    font-size: 2rem;
+}
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    resize: vertical;
+}
+
+.botonenviar {
+    background-color: #1f9ede; /*var(--primario);*/
+    width: 45%;
+    margin: 2rem auto;
+    margin-left: 2.5rem;
+    text-align: center;
+    font-size: 2rem;
+    color: white; /*var(--blanco);*/
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.botonenviar:hover {
+    background-color: #147bbf; /* Color más oscuro al pasar el cursor */
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+}
+
+#nacional-select, #regional-select, #internacional-select {
+    margin-bottom: 1rem;
+}
+
+
+  @media (min-width: 768px) {
+    .navegacion-{
+        flex-direction: row;
+        justify-content: space-between;    
+    }
+} 
+
+
+footer{
+    grid-area: footer;
+    border-radius: 10px;
+    background-color: var(--primario)/* rgb(33, 177, 221)*/;
+    text-align: center;
+    margin-top: 5rem;
+    color: var(--blanco);
+    font-size: 2.5rem;
+    /* usando google fonts */
+    font-family: "Briem Hand", cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    /*utilizamos flexbox para alinear el contenido*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+ 

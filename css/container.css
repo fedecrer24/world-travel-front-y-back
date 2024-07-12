@@ -1,0 +1,187 @@
+.container{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0px 1fr 1fr 1fr 1fr 100px;
+    grid-template-areas: /*"menu menu"*/
+                         "header header"
+                         "left contenido"
+                         "left1 contenido1"
+                         "left2 contenido2"
+                         "left3 contenido3"
+                         "footer footer";
+    grid-gap: 20px;
+    height: 100%;
+}
+
+
+/*.menu{
+    grid-area: menu;
+    border-radius: 10px;
+    background-color:rgb(33, 177, 221);
+    padding: 10px;
+    /*utilizamos flexbox para alinear el contenido
+    display: flex;
+    align-items:center;
+    justify-content:flex-start;*/
+
+
+.header{
+    grid-area: header;
+    background-color:rgb(33, 177, 221);
+    border-radius: 5px;
+    margin-top: 1rem;
+    color: white;
+    text-align: center;
+    font-size:x-large;
+    /*utilizamos flexbox para alinear el contenido*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.left{
+    grid-area: left;
+    background-color: white;
+    border-radius: 10px;
+/*    utilizamos flexbox para alinear el contenido   */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.contenido{
+    grid-area: contenido;
+    background-color: white;
+    border-radius: 10px;
+   /* utilizamos flexbox para alinear el contenido  */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.left1{
+    grid-area: left1;
+    background-color: white;
+    border-radius: 10px;
+    /*utilizamos flexbox para alinear el contenido  */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contenido1{
+    grid-area: contenido1;
+    background-color: white;
+    border-radius: 10px;
+    /*utilizamos flexbox para alinear el contenido  */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.left2{
+    grid-area: left2;
+    background-color: white;
+    border-radius: 10px;
+    /*utilizamos flexbox para alinear el contenido  */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contenido2{
+    grid-area: contenido2;
+    background-color: white;
+    border-radius: 10px;
+    /*utilizamos flexbox para alinear el contenido  */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.left3{
+    grid-area: left3;
+    background-color: white;
+    border-radius: 10px;
+    /*utilizamos flexbox para alinear el contenido  */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contenido3{
+    grid-area: contenido3;
+    background-color: white;
+    border-radius: 10px;
+    /*utilizamos flexbox para alinear el contenido  */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.footer{
+    grid-area: footer;
+    border-radius: 10px;
+    background-color: #1f9ede;
+    text-align: center;
+    color: white;
+    /* usando google fonts */
+    font-family: "Briem Hand", cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    /*utilizamos flexbox para alinear el contenido*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.item{
+    background-color: rgb(33, 177, 221);
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+}
+
+.fondoBlanco{
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 750px){
+    .container{
+        grid-template-areas: "menu menu"
+                             "header header"
+                             "left contenido"
+                             "left1 contenido1"
+                             "footer footer";
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .container{
+        grid-template-areas: "menu"
+                             "header"
+                             "left"                                                          
+                             "footer";
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+   /* .menu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+}*/

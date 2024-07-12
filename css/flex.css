@@ -1,0 +1,35 @@
+.contenedor-flex {
+    display: flex; /* Configura Flexbox */
+    flex-wrap: wrap;    
+    /* background-color: white;   */
+}
+
+.izquierda {
+    flex: 1; /* Asigna espacio igual a ambas partes */
+    padding: 10px; /* Espacio interno */
+    /* Ajustando la Imagen al tamanio del contenedor*/
+    width: 100%; /* Ajustar al ancho del contenedor */
+    /*height: 100%;  Ajustar a la altura del contenedor */
+    object-fit: contain; /* Ajustar para cubrir todo el contenedor */
+    background-color: white;
+}
+
+.derecha {
+    flex: 1; /* Asigna espacio igual a ambas partes */
+    padding: 10px; /* Espacio interno */
+    width: 100%;
+    background-color: white;
+}
+.fondo-blanco,h2,ul,p,li,i{
+    background-color: transparent;
+}
+
+h2,li,p{
+    color: rgb(17, 110, 218);
+}
+
+@media screen and (max-width: 450px) {
+    .izquierda, .derecha {
+    flex: 100%;
+    }
+  }

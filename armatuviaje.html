@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- LINK DE LOS ICONOS-->
+    <link rel="icon" href="./worldtravel.ico">  <!--Este es para el Ico-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!--**************************************************************-->
+    
+    <link rel="stylesheet" href="./css/estilotuviaje.css">
+    <link rel="stylesheet" href="showdata.html">
+    <!--enlace a archivo js-->
+    <!--**************************************************************-->
+    <!--Utilizando google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Briem+Hand:wght@500&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poetsen+One&family=Rubik+Scribble&display=swap" rel="stylesheet">
+    <!--**************************************************************-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Briem+Hand:wght@500&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poetsen+One&family=Rubik+Scribble&display=swap" rel="stylesheet">
+    <!--**************************************************************-->
+    <title>World Travel</title>
+</head>
+<body>
+         <!--parte universal-->
+    <header>
+        <div class="iconos texto">
+            <i class="fa-brands fa-whatsapp fa-xl" > 3886774550 |</i>    <!--icono wassap-->
+            <i class="fa-solid fa-phone fa-lg"> 38886774551 |</i>       <!--icono telofono-->
+            <i class="fa-sharp fa-regular fa-envelope fa-lg"> worldtravel@worldtravel.com</i>       <!--mail-->
+        </div>
+        <br>
+        <br>
+        <div class="iconos margen-derecho">      
+            <i class="fa-brands fa-twitter"></i>            <!--icono de twiter-->
+            <i class="fa-brands fa-instagram"></i>          <!--icono de instagran-->
+            <i class="fa-brands fa-facebook"></i>           <!--icono de facebook-->
+           <!-- <i class="fa-regular fa-pipe fa-lg"></i>        signo de puntuacion-->
+            <i class="fa-solid fa-pipe"></i>
+        </div>
+        <img src="./logowt1.png" alt="LOGO/ESCUDO DE WORLD TRAVEL"  width="400">   <!--aca agregue el logo-->
+</header>
+
+<div class="nav-bg">
+    <nav class="itemf navegacion contenedor">
+        <ul class="menuf">
+             <li><a  href="index.html">INICIO</a></li>
+             <li><a  href="">NOSOTROS</a>
+              <ul class="submenuf">
+                  <li><a href="index.html#quienes-somos">Quienes Somos</a></li>
+                  <li><a href="">Experiencia World<p>Proximamente</p></a></li>
+             </ul>
+           </li>
+             <li><a  href="index.html#destinos">DESTINOS</a>
+                 <ul class="submenuf">
+                      <li><a href="nacional.html">Nacional</a></li>
+                      <li><a href="regional.html">Regional</a></li>
+                      <li><a href="internacional.html">Internacional</a></li>
+                 </ul>
+             </li>
+
+             <li><a  href="contacto.html">CONTACTO</a></li>
+        </ul>
+    </nav>
+</div>
+          <!--parte universal-->
+          <h2 class="titulo">ARMA TU VIAJE</h2> 
+    <section id="formulario">
+        <h2>Elige tu Viaje</h2>
+        <form action="showdata.html">
+            <div class="form-group">
+                <label for="categoria-destino">Categoría de Destino:</label>
+                <select id="categoria-destino" name="categoria-destino" onchange="actualizarDestinos()" required>
+                    <option value="">Seleccionar</option>
+                    <option value="nacional">Nacional</option>
+                    <option value="regional">Regional</option>
+                    <option value="internacional">Internacional</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="destino">Destino:</label>
+                <select id="destino" name="destino" required>
+                    <option value="">Seleccionar</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="pasajeros-mayores">Pasajeros Mayores:</label>
+                <input type="number" id="pasajeros-mayores" name="pasajeros-mayores" min="1" max="10" required>
+            </div>
+
+            <div class="form-group">
+                <label for="pasajeros-menores">Pasajeros Menores:</label>
+                <input type="number" id="pasajeros-menores" name="pasajeros-menores" min="0" max="10" required>
+            </div>
+
+            <div class="form-group">
+                <label for="transporte">Transporte:</label>
+                <select id="transporte" name="transporte" required>
+                    <option value="opcion4">Elegir opción</option>
+                    <option value="bus">Bus</option>
+                    <option value="avion">Aéreo</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="hotel">Hotel:</label>
+                <select id="hotel" name="hotel" required>
+                    <option value="hotel1">Hotel 2*</option>
+                    <option value="hotel2">Hotel 3*</option>
+                    <option value="hotel3">Hotel 4*</option>
+                    <option value="hotel4">Hotel 5*</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="menu">Régimen:</label>
+                <select id="menu" name="menu" required>
+                    <option value="opcion4">Elegir opción</option>
+                    <option value="opcion4">Sin Régimen</option>
+                    <option value="opcion1">Desayuno</option>
+                    <option value="opcion2">Media Pensión</option>
+                    <option value="opcion3">Pensión Completa</option>
+                </select>
+            </div>
+           
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Arma tu Viaje. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function actualizarDestinos() {
+            const categoria = document.getElementById('categoria-destino').value;
+            const destino = document.getElementById('destino');
+
+            let opciones = '';
+
+            if (categoria === 'nacional') {
+                opciones = `
+                    <option value="rosario">Rosario</option>
+                    <option value="buenos-aires">Buenos Aires</option>
+                    <option value="cordoba">Córdoba</option>
+                `;
+            } else if (categoria === 'regional') {
+                opciones = `
+                    <option value="sierras">Sierras</option>
+                    <option value="monte">Monte</option>
+                    <option value="san-luis">San Luis</option>
+                `;
+            } else if (categoria === 'internacional') {
+                opciones = `
+                    <option value="argentina">Argentina</option>
+                    <option value="espana">España</option>
+                    <option value="brasil">Brasil</option>
+                `;
+            }
+
+            destino.innerHTML = opciones;
+        }
+    </script>
+</body>
+</html>

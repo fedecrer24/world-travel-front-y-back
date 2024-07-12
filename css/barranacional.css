@@ -1,0 +1,110 @@
+:root {
+    --blanco: #ffffff;
+    --primario: #1f9ede;
+    --negro: #000000;
+    --azul: #162ABF;
+    --seleccion: #62E0FF;
+    --contenedor: #e6f4ff;
+    --fondo: #1EB6DC;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family:"Noto Sans", sans-serif;
+    background-image: linear-gradient(to top, var(--fondo) 0%, var(--blanco) 100%);
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+/*NAVEGACION CON SUBMENU*/
+
+.nav-bg {
+    max-width: auto;
+    text-align: center;
+   }
+
+.navegacion ul {
+    list-style: none;
+}
+
+.menuf>li {
+  /*  position: relative;*/
+  display: inline-block; /*con esto acomodo el menu uno al lado del otro*/
+  justify-content: space-between;
+  margin: 0.5rem;
+  margin-right: 15rem;
+  padding-left: 5rem;
+  }
+
+
+/*ahora le daremos estilo a nuestros botones*/
+.menuf > li > a {
+    display: block;
+    padding-top: 30px;
+    padding: 0.8rem;
+    border-radius: 5px;
+    background-color: rgb(33, 177, 221);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white; /*con esto le pones color a las letras*/
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none; /*cpn esto le sacas el subrayad a las letras(etiquetas)*/
+}
+
+
+.menuf li a:hover {
+    color: white;
+    background-color: rgb(53, 205, 243);
+  }
+
+/*submenu*/
+.submenuf {
+    position: absolute;
+    z-index: 2;
+    background-color: #62E0FF; /*aca cambiale el fondo al submenu y fijate como queda*/
+    width: 20rem; /*con esto voy a cambiar el tamaño del sumenu*/
+    opacity:0;
+    transition: opacity 1.5s;
+}
+
+.submenuf li a{
+    display: block;
+  
+    padding-top: 31.3;
+    padding: 1.5rem;
+    width: auto;
+    border-radius: 5px;
+    font-size: 2.5rem;
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    
+}
+.submenuf li p {
+    color: red;
+    font-size: 1.5rem;
+}
+
+.menuf li:hover .submenuf {
+    visibility: visible;
+    opacity:1;
+    padding: 0;
+}
+
+a:active{
+    border: 2px solid black;
+    background-color: rgb(54, 200, 245);
+}
+
+/*esto va en conteiner*/
+.itemf{
+    background-color: rgb(33, 177, 221);
+    padding: 0.5rem;
+    color: white;
+    border-radius: 5px;
+}
